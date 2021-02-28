@@ -4,7 +4,6 @@
 
 <%
 	//Retrieving the values from items.jsp----------------------------------
-
 	String itemID = request.getParameter("itemID");
 	String itemCode = request.getParameter("itemCode");
 	String itemName = request.getParameter("itemName");
@@ -24,10 +23,10 @@
 		
 	<form method="post" action="updated.jsp">		
 				   <input name="itemID" type="hidden" value="<%=itemID%>"> 
-		Item code: <input name="itemCode" type="text" value="<%=itemCode%>"><br> 
-		Item name: <input name="itemName" type="text" value="<%=itemName%>"><br>
-		Item price: <input name="itemPrice" type="text" value="<%=itemPrice%>"><br> 
-		Item description: <input name="itemDesc" type="text" value="<%=itemDesc%>"><br>
+		Item code: <input name="itemCode" type="text" value="<%=itemCode%>"required><br> 
+		Item name: <input name="itemName" type="text" value="<%=itemName%>"required><br>
+		Item price: <input name="itemPrice" type="text" value="<%=itemPrice%>"required><br> 
+		Item description: <input name="itemDesc" type="text" value="<%=itemDesc%>"required><br>
 						  <input name="btnSubmit" type="submit" value="Update">
 						  <input name='itemID' type='hidden' value="itemID">
 						  <input name='itemCode' type='hidden' value="itemCode"> 

@@ -17,7 +17,7 @@
 	}
 
 	//Delete item----------------------------------	
-	if (request.getParameter("itemID") != null && request.getParameter("itemCode") == null) {
+	if (request.getParameter("itemID") != null) {
 		
 		Item itemObj = new Item();
 		
@@ -37,10 +37,10 @@
 		<h1>Items Management</h1>
 		
 		<form method="post" action="items.jsp">		
-			Item code: <input name="itemCode" type="text"><br> 
-			Item name: <input name="itemName" type="text"><br>
-			Item price: <input name="itemPrice" type="text"><br> 
-			Item description: <input name="itemDesc" type="text"><br>
+			Item code: <input name="itemCode" type="text" required><br> 
+			Item name: <input name="itemName" type="text" required><br>
+			Item price: <input name="itemPrice" type="text" required><br> 
+			Item description: <input name="itemDesc" type="text" required><br>
 			<input name="btnSubmit" type="submit" value="Save">
 		</form>
 			
