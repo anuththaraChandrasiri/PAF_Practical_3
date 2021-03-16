@@ -96,7 +96,7 @@ public class Item {
 			}
 			catch (Exception e)
 			{
-				output = "Error while inserting";
+				output = "Error while updating";
 				System.err.println(e.getMessage());
 			}
 			return output;
@@ -131,7 +131,7 @@ public class Item {
 			}
 			catch (Exception e)
 			{
-				output = "Error while inserting";
+				output = "Error while deleting";
 				System.out.println(itemID);
 				System.err.println(e.getMessage());
 			}
