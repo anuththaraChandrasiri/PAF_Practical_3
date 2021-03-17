@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--charset meta tag -->
+<meta charset="utf-8">
+<!--head code meta tag -->
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- java script files -->
+<script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+<!-- import validation.js -->
+<script src="js/validation.js" type="text/javascript"></script>
+<title>User info</title>
+</head>
+<body>
+
+	<hr>
+	<div class="container-fluid">
+		<h2>Register</h2>
+		<hr>
+		
+		<form class="form-horizontal" action="">
+				
+			<div class="form-group row">
+				<label class="control-label col-sm-3 text-right" for="username">Username*</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="username" name="username" 
+						onchange="emptyCheck('username',username)" onclick="emptyCheck('username',username)">
+				</div>
+				<label class="col-sm-3" for="username"></label>
+				<label class="col-sm-9 text-left" for="username">Username can contain any letters or numbers, without spaces</label>
+			</div>
+			
+			<div class="form-group row">
+				<label class="control-label col-sm-3 text-right" for="email">Email*</label>
+				<div class="col-sm-9">
+					<input type="email" class="form-control" id="email" name="email"
+						onchange="emptyCheck('email',email)" onclick="emptyCheck('email',email)">
+				</div>
+				<label class="col-sm-3" for="username"></label>
+				<label class="col-sm-9 text-left" for="username">Please provide your E-mail</label>
+			</div>
+			
+			<div class="form-group row">
+				<label class="control-label col-sm-3 text-right" for="nic">NIC*</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="nic" name="nic"
+						onchange="emptyCheck('nic',nic)" onclick="emptyCheck('nic',nic)">
+				</div>
+				<label class="col-sm-3" for="username"></label>
+				<label class="col-sm-9 text-left" for="username">Please provide your NIC</label>
+			</div>
+				
+			<div class="form-group row">
+				<label class="control-label col-sm-3 text-right" for="mobile">Mobile*</label>
+				<div class="col-sm-9">
+					<input type="tel" class="form-control" id="mobile" name="mobile"
+						onchange="emptyCheck('mobile',mobile)" onclick="emptyCheck('mobile',mobile)">
+				</div>
+				<label class="col-sm-3" for="username"></label>
+				<label class="col-sm-9 text-left" for="username">Please provide your Mobile number</label>
+			</div>	
+			
+			<div class="form-group row">
+				<label class="control-label col-sm-3 text-right" for="pwd">Password*</label>
+				<div class="col-sm-9">
+					<input type="password" class="form-control" id="pwd" name="pwd"
+						onchange="emptyCheck('pwd',pwd)" onclick="emptyCheck('pwd',pwd)">
+				</div>
+				<label class="col-sm-3" for="username"></label>
+				<label class="col-sm-9 text-left" for="username">Password should be at least 4 characters</label>
+			</div>
+			
+			<div class="form-group row">
+				<label class="control-label col-sm-3 text-right" for="pwdconfirm">Password (Confirm)*</label>
+				<div class="col-sm-9">
+					<input type="password" class="form-control" id="pwdconfirm"	name="pwdconfirm"
+						onchange="emptyCheck('pwdconfirm',pwdconfirm)" onclick="emptyCheck('pwdconfirm',pwdconfirm)">
+				</div>
+				<label class="col-sm-3" for="username"></label>
+				<label class="col-sm-9 text-left" for="username">Please confirm your password</label>
+			</div>	
+				
+			<div class="form-group row">
+				<label class="control-label col-sm-3"></label>
+				<div class="col-sm-3">
+					<button type="submit" class="btn btndefault bg-light btn-outline-dark" 
+						onclick="validateForm()">Register</button>
+				</div>
+			</div>
+			
+		</form>
+				
+	</div>
+	<hr>
+
+</body>
+</html>
