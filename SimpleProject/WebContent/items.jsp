@@ -31,26 +31,46 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" href="Views/bootstrap.min.css">
 <title>Items Management</title>
 </head>
 <body>
-		<h1>Items Management</h1>
 		
-		<form method="post" action="items.jsp">		
-			Item code: <input name="itemCode" type="text" required><br> 
-			Item name: <input name="itemName" type="text" required><br>
-			Item price: <input name="itemPrice" type="text" required><br> 
-			Item description: <input name="itemDesc" type="text" required><br>
-			<input name="btnSubmit" type="submit" value="Save">
-		</form>
-			
-			<%
-				out.print(session.getAttribute("statusMsg"));
-			%>
-			<br>
-			<%
-				Item itemObj = new Item();
-				out.print(itemObj.readItems());
-			%>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				
+				<h1>Items Management</h1>
+				<hr>
+				
+				<form method="post" action="items.jsp">		
+					Item code: <input name="itemCode" type="text" required class="form-control"><br> 
+					Item name: <input name="itemName" type="text" required class="form-control"><br>
+					Item price: <input name="itemPrice" type="text" required class="form-control"><br> 
+					Item description: <input name="itemDesc" type="text" required class="form-control"><br>
+					<input name="btnSubmit" type="submit" value="Save" class="btn btn-primary">
+				</form>
+					
+				<br>
+				<div class="alert alert-success">
+						<% 
+							out.print(session.getAttribute("statusMsg"));
+						%>
+				</div>
+				<hr>
+				<br>
+				
+				<%
+					Item itemObj = new Item();
+					out.print(itemObj.readItems());
+				%>				
+				
+				<hr>
+				<br>
+				
+			</div>
+		</div>
+	</div>		
+		
 </body>
 </html>

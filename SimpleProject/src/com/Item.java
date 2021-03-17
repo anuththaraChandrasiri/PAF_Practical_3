@@ -181,14 +181,14 @@ public class Item {
 					
 					// buttons
 					output += "<td><form method='post' action='update.jsp'>"
-							+ "<input name='btnUpdate' type='submit' value='Update'>"
+							+ "<input name='btnUpdate' type='submit' value='Update' class='btn btn-success'>"
 							+ "<input name='itemID' type='hidden' value='" + itemID + "'>" 
 							+ "<input name='itemCode' type='hidden' value='" + itemCode + "'>" 
 							+ "<input name='itemName' type='hidden' value='" + itemName + "'>" 
 							+ "<input name='itemPrice' type='hidden' value='" + itemPrice + "'>" 
 							+ "<input name='itemDesc' type='hidden' value='" + itemDesc + "'>" +"</form></td>"
 							+ "<td><form method='post' action='items.jsp'>"
-							+ "<input name='btnRemove' type='submit' value='Remove'>"
+							+ "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>"
 							+ "<input name='itemID' type='hidden' value='" + itemID + "'>" + "</form></td></tr>";
 				}
 				con.close();
